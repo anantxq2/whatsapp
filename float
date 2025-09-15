@@ -1,3 +1,76 @@
+<div id="myDiv"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Random Redirect Button</title>
+<style>
+/* Button Design */
+.wa-join-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  background:linear-gradient(90deg,#25D366,#128C7E);
+  color:#fff;
+  font-family:system-ui,Arial,sans-serif;
+  font-weight:700;
+  font-size:18px;
+  border-radius:40px;
+  padding:14px 24px;
+  text-decoration:none;
+  box-shadow:0 6px 16px rgba(0,0,0,0.3);
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.wa-join-btn:hover{ transform:translateY(-3px); }
+.wa-join__icon{
+  width:46px;height:46px;
+  border-radius:50%;
+  overflow:hidden;
+  flex-shrink:0;
+}
+.wa-join__icon img{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+/* === Mobile Only === */
+@media (min-width: 768px) {
+  /* Hide on tablets and desktops */
+  .wa-join-btn{
+    display: none !important;
+  }
+}
+</style>
+<a id="random-btn" class="wa-join-btn" href="#" aria-label="Join Now">
+  <span class="wa-join__icon" aria-hidden="true">
+    <img src="https://i.postimg.cc/mknNpBtc/photo-2025-09-15-09-44-31.jpg" alt="">
+  </span>
+  <span class="wa-join__text">Please Join WhatsApp Group</span>
+</a>
+<script>
+// ✅ Redirect URLs list
+const urls = [
+  "https://a.com",
+  "https://s.com",
+  "https://d.com",
+  "https://f.com",
+  "https://g.com",
+  "https://h.com"
+];
+document.getElementById("random-btn").addEventListener("click", function(e){
+  e.preventDefault();
+  // random URL pick
+  const randomLink = urls[Math.floor(Math.random() * urls.length)];
+  window.location.href = randomLink;
+});
+</script>
+
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{ 
+  let d=document.getElementById("myDiv"); 
+  let p=document.querySelector("p"); 
+  if(p) p.parentNode.insertBefore(d,p); 
+});
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Floating Button</title>
@@ -150,67 +223,3 @@ document.getElementById("random-btn").addEventListener("click", function(e){
   window.location.href = randomLink;
 });
 </script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Random Redirect Button</title>
-<style>
-/* Button Design */
-.wa-join-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  background:linear-gradient(90deg,#25D366,#128C7E);
-  color:#fff;
-  font-family:system-ui,Arial,sans-serif;
-  font-weight:700;
-  font-size:18px;
-  border-radius:40px;
-  padding:14px 24px;
-  text-decoration:none;
-  box-shadow:0 6px 16px rgba(0,0,0,0.3);
-  transition:transform .12s ease, box-shadow .12s ease;
-}
-.wa-join-btn:hover{ transform:translateY(-3px); }
-.wa-join__icon{
-  width:46px;height:46px;
-  border-radius:50%;
-  overflow:hidden;
-  flex-shrink:0;
-}
-.wa-join__icon img{
-  width:100%;height:100%;object-fit:cover;display:block;
-}
-/* === Mobile Only === */
-@media (min-width: 768px) {
-  /* Hide on tablets and desktops */
-  .wa-join-btn{
-    display: none !important;
-  }
-}
-</style>
-<a id="random-btn" class="wa-join-btn" href="#" aria-label="Join Now">
-  <span class="wa-join__icon" aria-hidden="true">
-    <img src="https://i.postimg.cc/mknNpBtc/photo-2025-09-15-09-44-31.jpg" alt="">
-  </span>
-  <span class="wa-join__text">Please Join WhatsApp Group</span>
-</a>
-<script>
-// ✅ Redirect URLs list
-const urls = [
-  "https://a.com",
-  "https://s.com",
-  "https://d.com",
-  "https://f.com",
-  "https://g.com",
-  "https://h.com"
-];
-document.getElementById("random-btn").addEventListener("click", function(e){
-  e.preventDefault();
-  // random URL pick
-  const randomLink = urls[Math.floor(Math.random() * urls.length)];
-  window.location.href = randomLink;
-});
-</script>
-
-
